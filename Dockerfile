@@ -33,7 +33,7 @@ RUN echo "@community https://nl.alpinelinux.org/alpine/edge/community" >> /etc/a
  && rm -rf /tmp/* /var/cache/apk/*
 
 COPY rootfs /
-RUN chmod +x /usr/local/bin/run.sh /services/*/run /services/.s6-svscan/*
+RUN chmod +x /start.sh /services/*/run /services/.s6-svscan/*
 VOLUME /rainloop/data
 EXPOSE 8888
 CMD ["start.sh"]
