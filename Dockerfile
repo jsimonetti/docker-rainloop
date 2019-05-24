@@ -36,4 +36,4 @@ COPY rootfs /
 RUN chmod +x /start.sh /services/*/run /services/.s6-svscan/*
 VOLUME /rainloop/data
 EXPOSE 8888
-CMD ["start.sh"]
+CMD ["/start.sh"]
